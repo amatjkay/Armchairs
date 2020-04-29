@@ -1,0 +1,234 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "SourceSansPro-400", sans-serif;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font: inherit;
+  color: inherit;
+  transition: all 0.5s;
+  height: 45px;
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+  border-radius: 23px;
+  background-color: $accent;
+  border: none;
+  &:hover {
+  }
+}
+
+.input {
+  display: block;
+  outline: none;
+  padding: 0.5em 1em;
+  transition: all 0.3s;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+  font-size: 13px;
+  &::placeholder {
+    text-align: center;
+  }
+  &::-webkit-input-placeholder {
+    color: #9c9c9c;
+  }
+  &::-moz-placeholder {
+    color: #9c9c9c;
+  } /* Firefox 19+ */
+  &:-moz-placeholder {
+    color: #9c9c9c;
+  } /* Firefox 18- */
+  &:-ms-input-placeholder {
+    color: #9c9c9c;
+  }
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover {
+  }
+}
+
+.title {
+  color: $maintext;
+  font-size: 41px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.subtitle {
+  color: $accent;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+.header {
+  &-inner {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 400px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    @media (max-width: 400px) {
+      margin: 20px;
+    }
+  }
+
+  &-box {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  &-box__phone {
+    color: $maintext;
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  &-box__callback {
+    color: $accent;
+  }
+}
+
+//top
+.top {
+  padding: 80px 0 60px;
+  min-height: 580px;
+  background: url(../img/top-bg.jpg) #eaf1f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 1700px) {
+    background-position: 30% 0;
+  }
+  @media (max-width: 767px) {
+    background-position: 40% 0;
+  }
+
+  &__title {
+    text-align: right;
+    @media (max-width: 768px) {
+      font-size: 34px;
+    }
+    @media (max-width: 520px) {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    text-align: right;
+    margin-bottom: 65px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 520px) {
+      font-size: 18px;
+    }
+  }
+
+  &__callback {
+    display: block;
+    margin-left: auto;
+    padding: 35px;
+    width: 300px;
+    height: 240px;
+    box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
+    border-radius: 20px;
+    background-color: #ffffff;
+    @media (max-width: 330px) {
+      transform: translateX(-5%);
+    }
+  }
+
+  &__callback-heading {
+    font-size: 20px;
+    color: $accent;
+    margin-bottom: 14px;
+  }
+
+  &__callback-subheading {
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 19px;
+  }
+
+  &__callback-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__callback-btn {
+    width: 100%;
+  }
+}
