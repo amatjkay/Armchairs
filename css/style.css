@@ -83,6 +83,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 li {
   list-style: none;
 }
@@ -99,12 +103,16 @@ button {
   padding: 0.5em 1em;
   font: inherit;
   color: inherit;
-  transition: all 0.5s;
+  transition: all 0.3s;
   height: 45px;
   box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
   border-radius: 23px;
   background-color: #68b0c9;
   border: none;
+}
+
+.btn:hover {
+  background-color: #5ea5bd;
 }
 
 .input {
@@ -116,8 +124,18 @@ button {
   border-radius: 20px;
   border: 1px solid #e8e8e8;
   font-size: 13px;
+  transition: all 0.3s;
+  color: #535353;
   /* Firefox 19+ */
   /* Firefox 18- */
+}
+
+.input:hover {
+  border: 1px solid #535353;
+}
+
+.input:focus {
+  border: 1px solid #535353;
 }
 
 .input::placeholder {
@@ -181,16 +199,16 @@ button {
 }
 
 .title {
+  font-family: "SourceSansPro-700";
+  text-align: center;
   color: #535353;
-  font-size: 41px;
-  font-weight: 400;
-  line-height: 50px;
+  font-size: 36px;
 }
 
 .subtitle {
+  font-family: "SourceSansPro-400";
   color: #68b0c9;
   font-size: 27px;
-  font-weight: 400;
   line-height: 42px;
 }
 
@@ -263,6 +281,7 @@ button {
 }
 
 .top__title {
+  font-size: 41px;
   text-align: right;
 }
 
@@ -275,6 +294,7 @@ button {
 @media (max-width: 520px) {
   .top__title {
     font-size: 24px;
+    margin-bottom: 15px;
   }
 }
 
@@ -293,6 +313,7 @@ button {
 @media (max-width: 520px) {
   .top__subtitle {
     font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -315,12 +336,14 @@ button {
 }
 
 .top__callback-heading {
+  font-family: "SourceSansPro-700";
   font-size: 20px;
   color: #68b0c9;
   margin-bottom: 14px;
 }
 
 .top__callback-subheading {
+  font-family: "SourceSansPro-300";
   font-size: 12px;
   color: #000;
   margin-bottom: 19px;
@@ -333,5 +356,77 @@ button {
 
 .top__callback-btn {
   width: 100%;
+}
+
+.why-exactly {
+  padding: 80px 0 100px;
+  background-image: linear-gradient(to top, #f9fbfd 0%, #ffffff 100%);
+}
+
+.why-exactly__title {
+  margin-bottom: 130px;
+}
+
+.why-exactly__content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.why-exactly__content-item-img {
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.why-exactly__content-item:nth-child(2) .why-exactly__content-item-img {
+  position: relative;
+  order: 1;
+}
+
+.why-exactly__content-item:nth-child(2) .why-exactly__content-item-textbox {
+  position: relative;
+  order: 2;
+}
+
+.why-exactly__content-item:nth-child(2)::before {
+  transform: translate(-50%, -100%) rotateY(180deg);
+}
+
+.why-exactly__content-item:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.why-exactly__content-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 199px;
+  height: 53px;
+  background-image: url(../img/icons/arrow-right.svg);
+}
+
+.why-exactly__content-item-textbox {
+  max-width: 400px;
+}
+
+.why-exactly__content-item-title {
+  font-family: "MuseoSansCyrl-500";
+  color: #68b0c9;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.why-exactly__content-item-descr {
+  color: #535353;
+  font-family: "SourceSansPro-300";
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
