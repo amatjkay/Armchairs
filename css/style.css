@@ -88,6 +88,10 @@ a:hover {
   text-decoration: underline;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style: none;
 }
@@ -792,7 +796,7 @@ button {
   align-items: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 690px) {
   .footer-inner {
     flex-direction: column;
     justify-content: center;
@@ -804,7 +808,7 @@ button {
   display: inline-flex;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 690px) {
   .footer__logo {
     margin: 20px;
   }
