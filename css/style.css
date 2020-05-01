@@ -770,4 +770,43 @@ button {
   font-family: 'SourceSansPro-700';
   font-size: 16px;
 }
+
+.footer__privacy {
+  text-decoration: underline;
+  color: #68b0c9;
+}
+
+.footer__privacy:hover {
+  text-decoration: none;
+}
+
+.footer__info {
+  color: #505050;
+  font-family: 'SourceSansPro-300';
+}
+
+.footer-inner {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__logo {
+  display: inline-flex;
+}
+
+@media (max-width: 400px) {
+  .footer__logo {
+    margin: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
