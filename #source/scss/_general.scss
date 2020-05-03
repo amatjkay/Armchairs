@@ -732,7 +732,12 @@ button {
   }
 
   &__img {
-    @include inline-flex;
+    display: block;
+    margin: 0 auto;
+    & img {
+      display: inherit;
+      margin: inherit;
+    }
   }
   &-inner {
     padding: 0 50px;

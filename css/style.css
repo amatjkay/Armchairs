@@ -971,7 +971,13 @@ button {
 }
 
 .technology__img {
-  display: inline-flex;
+  display: block;
+  margin: 0 auto;
+}
+
+.technology__img img {
+  display: inherit;
+  margin: inherit;
 }
 
 .technology-inner {
