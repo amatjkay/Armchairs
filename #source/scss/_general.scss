@@ -722,6 +722,189 @@ button {
 
 // CERTIFICATIONS end
 
+// technology start
+.technology {
+  background-color: #ffffff;
+  padding: 130px 0 70px;
+  min-height: 545px;
+  @media (max-width: 690px) {
+    padding: 70px 0 70px;
+  }
+
+  &__img {
+    @include inline-flex;
+  }
+  &-inner {
+    padding: 0 50px;
+    @include flexbox;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+    @media (max-width: 690px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &-left-column {
+    text-align: right;
+    height: 100%;
+    flex-direction: column;
+    @include inline-flex;
+    justify-content: space-between;
+    min-height: 320px;
+    max-width: 250px;
+
+    @media (max-width: 690px) {
+      text-align: left;
+      min-height: 220px;
+      max-width: 400px;
+    }
+    &__top-text {
+      position: relative;
+      margin-top: -25px;
+      @media (max-width: 690px) {
+        text-align: center;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../img/icons/chain-long.svg);
+        background-repeat: no-repeat;
+        height: 110px;
+        width: 125px;
+        right: -140px;
+        top: 17px;
+        @media (max-width: 992px) {
+          right: -80px;
+          top: 35px;
+          transform: rotate(-50deg);
+        }
+        @media (max-width: 767px) {
+          right: -55px;
+        }
+        @media (max-width: 690px) {
+          display: none;
+        }
+      }
+    }
+
+    &__bottom-text {
+      position: relative;
+      padding-bottom: 25px;
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../img/icons/chain-long-bottom.svg);
+        background-repeat: no-repeat;
+        height: 55px;
+        width: 145px;
+        transform: rotate(-10deg);
+        right: -130px;
+        top: -35px;
+        @media (max-width: 992px) {
+          right: -90px;
+        }
+        @media (max-width: 767px) {
+          right: -55px;
+        }
+        @media (max-width: 690px) {
+          display: none;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &-text {
+    &__subtitle {
+      font-size: 20px;
+      @media (max-width: 690px) {
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+
+    &__descr {
+      font-size: 14px;
+      @media (max-width: 690px) {
+        text-align: left;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &-right-column {
+    height: 100%;
+    flex-direction: column;
+    @include inline-flex;
+    justify-content: space-between;
+    min-height: 320px;
+    max-width: 250px;
+    @media (max-width: 690px) {
+      min-height: 220px;
+      max-width: 400px;
+    }
+
+    &__top-text {
+      position: relative;
+      @media (max-width: 690px) {
+        text-align: left;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/icons/chain-long.svg);
+        background-repeat: no-repeat;
+        height: 110px;
+        width: 125px;
+        transform: rotate(125deg);
+        left: -130px;
+        top: -40px;
+        @media (max-width: 992px) {
+          left: -85px;
+        }
+        @media (max-width: 767px) {
+          left: -55px;
+        }
+        @media (max-width: 690px) {
+          display: none;
+        }
+      }
+    }
+
+    &__bottom-text {
+      position: relative;
+      padding-bottom: 25px;
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/icons/chain-long-bottom.svg);
+        background-repeat: no-repeat;
+        height: 55px;
+        width: 145px;
+        transform: rotate(-195deg);
+        left: -150px;
+        top: 15px;
+        @media (max-width: 992px) {
+          transform: rotate(-175deg);
+          left: -95px;
+          top: 100px;
+        }
+        @media (max-width: 767px) {
+          left: -65px;
+        }
+        @media (max-width: 690px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// technology end
+
 // FOOTER start
 .footer {
   &__privacy {

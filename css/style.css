@@ -958,6 +958,253 @@ button {
   color: #535353;
 }
 
+.technology {
+  background-color: #ffffff;
+  padding: 130px 0 70px;
+  min-height: 545px;
+}
+
+@media (max-width: 690px) {
+  .technology {
+    padding: 70px 0 70px;
+  }
+}
+
+.technology__img {
+  display: inline-flex;
+}
+
+.technology-inner {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .technology-inner {
+    padding: 0;
+  }
+}
+
+@media (max-width: 690px) {
+  .technology-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.technology-left-column {
+  text-align: right;
+  height: 100%;
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: space-between;
+  min-height: 320px;
+  max-width: 250px;
+}
+
+@media (max-width: 690px) {
+  .technology-left-column {
+    text-align: left;
+    min-height: 220px;
+    max-width: 400px;
+  }
+}
+
+.technology-left-column__top-text {
+  position: relative;
+  margin-top: -25px;
+}
+
+@media (max-width: 690px) {
+  .technology-left-column__top-text {
+    text-align: center;
+  }
+}
+
+.technology-left-column__top-text::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icons/chain-long.svg);
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 125px;
+  right: -140px;
+  top: 17px;
+}
+
+@media (max-width: 992px) {
+  .technology-left-column__top-text::after {
+    right: -80px;
+    top: 35px;
+    transform: rotate(-50deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .technology-left-column__top-text::after {
+    right: -55px;
+  }
+}
+
+@media (max-width: 690px) {
+  .technology-left-column__top-text::after {
+    display: none;
+  }
+}
+
+.technology-left-column__bottom-text {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.technology-left-column__bottom-text::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icons/chain-long-bottom.svg);
+  background-repeat: no-repeat;
+  height: 55px;
+  width: 145px;
+  transform: rotate(-10deg);
+  right: -130px;
+  top: -35px;
+}
+
+@media (max-width: 992px) {
+  .technology-left-column__bottom-text::after {
+    right: -90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .technology-left-column__bottom-text::after {
+    right: -55px;
+  }
+}
+
+@media (max-width: 690px) {
+  .technology-left-column__bottom-text::after {
+    display: none;
+    text-align: left;
+  }
+}
+
+.technology-text__subtitle {
+  font-size: 20px;
+}
+
+@media (max-width: 690px) {
+  .technology-text__subtitle {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.technology-text__descr {
+  font-size: 14px;
+}
+
+@media (max-width: 690px) {
+  .technology-text__descr {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+.technology-right-column {
+  height: 100%;
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: space-between;
+  min-height: 320px;
+  max-width: 250px;
+}
+
+@media (max-width: 690px) {
+  .technology-right-column {
+    min-height: 220px;
+    max-width: 400px;
+  }
+}
+
+.technology-right-column__top-text {
+  position: relative;
+}
+
+@media (max-width: 690px) {
+  .technology-right-column__top-text {
+    text-align: left;
+  }
+}
+
+.technology-right-column__top-text::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icons/chain-long.svg);
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 125px;
+  transform: rotate(125deg);
+  left: -130px;
+  top: -40px;
+}
+
+@media (max-width: 992px) {
+  .technology-right-column__top-text::before {
+    left: -85px;
+  }
+}
+
+@media (max-width: 767px) {
+  .technology-right-column__top-text::before {
+    left: -55px;
+  }
+}
+
+@media (max-width: 690px) {
+  .technology-right-column__top-text::before {
+    display: none;
+  }
+}
+
+.technology-right-column__bottom-text {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.technology-right-column__bottom-text::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icons/chain-long-bottom.svg);
+  background-repeat: no-repeat;
+  height: 55px;
+  width: 145px;
+  transform: rotate(-195deg);
+  left: -150px;
+  top: 15px;
+}
+
+@media (max-width: 992px) {
+  .technology-right-column__bottom-text::before {
+    transform: rotate(-175deg);
+    left: -95px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .technology-right-column__bottom-text::before {
+    left: -65px;
+  }
+}
+
+@media (max-width: 690px) {
+  .technology-right-column__bottom-text::before {
+    display: none;
+  }
+}
+
 .footer__privacy {
   text-decoration: underline;
   color: #68b0c9;
