@@ -16,6 +16,10 @@ h1 {
   margin: 0;
   padding: 0;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 
 a {
   text-decoration: none;
@@ -409,12 +413,14 @@ button {
 
 //SALES start
 .sales {
-  background: url('../img/mid-bg.jpg') no-repeat left;
+  padding: 70px 0 50px;
+  background: url('../img/mid-bg.jpg') no-repeat;
   background-size: cover;
-  @media (max-width: 1800px) {
+  min-height: 490px;
+  @media (max-width: 1970px) {
     background-position: 40% top;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: 1700px) {
     background-position: 50% top;
   }
   @media (max-width: 767px) {
@@ -428,14 +434,12 @@ button {
   }
 
   &__content {
-    min-height: 490px;
-    padding: 70px 0 50px;
-    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
     text-align: center;
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
+
     @media (max-width: 400px) {
       padding: 40px 0 40px;
     }
@@ -444,12 +448,22 @@ button {
     text-align: left;
   }
   &__round-price {
-    transform: translate(-40%, 80%);
+    transform: translate(75%, 80%);
     margin: 0 auto;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #ffffff;
+    @media (max-width: 992px) {
+      transform: translate(45%, 70%);
+    }
+    @media (max-width: 767px) {
+      transform: translate(-20%, 50%);
+    }
+    @media (max-width: 690px) {
+      transform: translate(0%, -20%);
+    }
+
     &::after {
       content: '';
       margin-right: 10px;
@@ -473,20 +487,9 @@ button {
         display: none;
       }
     }
-    @media (max-width: 992px) {
-      transform: translate(-65%, 45%);
-    }
-    @media (max-width: 767px) {
-      transform: translate(-130%, 50%);
-    }
-    @media (max-width: 690px) {
-      transform: translate(0, 0);
-    }
   }
 
   &__inner {
-    position: absolute;
-    right: 0;
     @media (max-width: 690px) {
       position: initial;
       display: block;
@@ -578,6 +581,147 @@ button {
 
 // WHY EXACTLY end
 
+// STATISTICS start
+.statistics {
+  .container {
+    @media (max-width: 767px) {
+      min-width: fit-content;
+    }
+  }
+  min-height: 275px;
+  background-color: #ffffff;
+  padding: 100px 75px;
+  @media (max-width: 500px) {
+    padding: 60px 40px;
+  }
+  &__inner {
+    padding-bottom: 20px;
+    min-height: 120px;
+    @include flexbox;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+
+    @media (max-width: 767px) {
+      min-height: 300px;
+      margin: -100px;
+    }
+    @media (max-width: 690px) {
+      flex-direction: column;
+      margin: -50px 0px;
+    }
+    @media (max-width: 500px) {
+      min-height: 600px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: inherit;
+    background: url(../img/icons/armchair.png) no-repeat;
+    background-position: center top;
+    min-width: 110px;
+    min-height: 120px;
+    @media (max-width: 767px) {
+      flex: -1 1 45%;
+    }
+    @media (max-width: 690px) {
+      flex-direction: column;
+      margin: 20px;
+    }
+    @media (max-width: 500px) {
+      flex: 1 1 90%;
+      margin-top: 40px;
+    }
+    &-value {
+      font-family: 'SourceSansPro-700';
+      color: $accent;
+      font-size: 48px;
+      @media (max-width: 767px) {
+        margin-right: 0px !important;
+      }
+    }
+
+    &-descr {
+      margin-bottom: -25px;
+      font-family: 'SourceSansPro-500';
+      font-size: 18px;
+      color: $maintext;
+    }
+  }
+}
+// STATISTICS end
+
+// CERTIFICATIONS start
+.sertifications {
+  background-image: linear-gradient(to bottom, #f9fbfd 0%, #ecf3f8 100%);
+  padding: 80px 0 90px;
+  @media (max-width: 690px) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    @include flexbox;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    min-height: 310px;
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 85px;
+    @media (max-width: 690px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @media (max-width: 690px) {
+      & img {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__textbox {
+    max-width: 720px;
+    @media (max-width: 690px) {
+      max-width: 400px;
+    }
+
+    &-heading {
+      background-image: url(../img/icons/warning.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 70px;
+      margin-bottom: 50px;
+      font-size: 22px;
+      color: $accent;
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-descr {
+      font-size: 18px;
+      color: $maintext;
+    }
+  }
+}
+
+// CERTIFICATIONS end
+
 // FOOTER start
 .footer {
   &__privacy {
@@ -610,3 +754,4 @@ button {
     }
   }
 }
+// FOOTER end
