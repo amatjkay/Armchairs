@@ -55,6 +55,7 @@ button {
   border-radius: 23px;
   background-color: $accent;
   border: none;
+  color: #ffffff;
   &:hover {
     background-color: #5ea5bd;
   }
@@ -122,6 +123,26 @@ button {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
+  &::placeholder {
+    text-align: center;
+  }
+  &::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+
+  &:-ms-input-placeholder {
+    text-align: center;
+  }
 }
 
 .title {
@@ -137,15 +158,35 @@ button {
   line-height: 42px;
 }
 
+.round-price {
+  @include flexbox;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.sale {
+  display: block;
+  font-family: 'SourceSansPro-700';
+  color: #68b0c9;
+  font-size: 17px;
+  line-height: 47px;
+}
+
 .previous-price {
   display: block;
   font-family: 'SourceSansPro-400';
   color: #1e1e1e;
   font-size: 18px;
-  line-height: 47px;
   text-decoration: line-through;
 }
 .current-price {
+  padding: 10px 0 0 0;
   display: block;
   font-family: 'SourceSansPro-700';
   color: #d04545;
@@ -265,26 +306,6 @@ button {
   &__callback-input {
     width: 100%;
     margin-bottom: 15px;
-    &::placeholder {
-      text-align: center;
-    }
-    &::-webkit-input-placeholder {
-      text-align: center;
-    }
-
-    &:-moz-placeholder {
-      /* Firefox 18- */
-      text-align: center;
-    }
-
-    &::-moz-placeholder {
-      /* Firefox 19+ */
-      text-align: center;
-    }
-
-    &:-ms-input-placeholder {
-      text-align: center;
-    }
   }
 
   &__callback-btn {
@@ -416,6 +437,7 @@ button {
   padding: 70px 0 50px;
   background: url('../img/mid-bg.jpg') no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 490px;
   @media (max-width: 1970px) {
     background-position: 40% top;
@@ -430,7 +452,6 @@ button {
   }
 
   &__previous-price {
-    margin-top: 25px;
   }
 
   &__content {
@@ -449,11 +470,7 @@ button {
   }
   &__round-price {
     transform: translate(75%, 80%);
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ffffff;
+
     @media (max-width: 992px) {
       transform: translate(45%, 70%);
     }
@@ -909,6 +926,114 @@ button {
 }
 
 // technology end
+
+// callme start
+.callme {
+  background: url('../img/mid2-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 540px) {
+    background-image: none;
+    background-color: #ecf3f8;
+  }
+
+  &__inner {
+    padding: 60px 0 70px;
+    min-height: 350px;
+    position: relative;
+  }
+
+  &__round-price {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(0, -50%);
+    @media (max-width: 1900px) {
+      left: 25%;
+    }
+    @media (max-width: 992px) {
+      left: 15%;
+    }
+    @media (max-width: 690px) {
+      left: 8%;
+    }
+    @media (max-width: 540px) {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__sale {
+    display: block;
+  }
+
+  &__previous-price {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  &__current-price {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  &__callback {
+    @include flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 230px;
+    max-width: 260px;
+    margin-left: auto;
+    text-align: center;
+
+    &-title {
+      color: $maintext;
+      font-family: 'SourceSansPro-700';
+      font-size: 20px;
+    }
+
+    &-subtitle {
+      background: #fff;
+      color: $accent;
+      font-family: 'SourceSansPro-700';
+      font-size: 20px;
+      line-height: 34px;
+      margin: 0 0 15px 0;
+    }
+
+    &-input {
+      width: 100%;
+      &::placeholder {
+        text-align: center;
+      }
+      &::-webkit-input-placeholder {
+        text-align: center;
+      }
+
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        text-align: center;
+      }
+
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        text-align: center;
+      }
+
+      &:-ms-input-placeholder {
+        text-align: center;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// callme end
 
 // FOOTER start
 .footer {
