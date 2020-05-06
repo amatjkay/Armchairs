@@ -1235,6 +1235,7 @@ button {
 }
 
 .callme__callback {
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1285,6 +1286,7 @@ button {
 }
 
 .callme__callback-input {
+  margin-bottom: 10px;
   width: 100%;
 }
 
