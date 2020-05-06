@@ -284,6 +284,8 @@ button {
     box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
     border-radius: 20px;
     background-color: #ffffff;
+    position: relative;
+
     @media (max-width: 330px) {
       transform: translateX(-5%);
     }
@@ -958,9 +960,8 @@ button {
       left: 8%;
     }
     @media (max-width: 540px) {
-      position: relative;
-      display: block;
-      margin: 0 auto;
+      position: initial;
+      margin: 60px auto;
     }
   }
   &__sale {
@@ -986,6 +987,23 @@ button {
     max-width: 260px;
     margin-left: auto;
     text-align: center;
+    @media (max-width: 540px) {
+      margin: 0 auto;
+      position: relative;
+      top: -20px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: 120px;
+      background: no-repeat center/cover url(../img/icons/arrow-arc.svg);
+      width: 65px;
+      height: 105px;
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
 
     &-title {
       color: $maintext;
@@ -1034,6 +1052,240 @@ button {
 }
 
 // callme end
+
+// grey-collor start
+.grey-collor {
+  padding: 60px 0 70px;
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+
+  &__titlebox {
+    margin-right: -50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    text-align: right;
+    max-width: 100px;
+    margin-right: 60px;
+    font-size: 22px;
+    font-family: 'SourceSansPro-700';
+  }
+
+  &__subtitle {
+    text-align: left;
+    max-width: 150px;
+    font-size: 22px;
+    line-height: initial;
+    font-family: 'SourceSansPro-700';
+  }
+
+  &__lefttext {
+    text-align: right;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 300px;
+    padding-right: 100px;
+    font-family: 'SourceSansPro-500';
+    font-size: 15px;
+    line-height: 1.2;
+    color: #939393;
+    & p {
+      position: relative;
+      margin-top: 30px;
+    }
+    @media (max-width: 992px) {
+      min-height: 380px;
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    @media (max-width: 540px) {
+      text-align: left;
+      min-height: initial;
+      display: block;
+      margin-right: auto;
+      max-width: 200px;
+    }
+  }
+
+  &__lefttext-1 {
+    &::after {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-grey.svg);
+      width: 81px;
+      height: 41px;
+      top: 7px;
+      right: -90px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__lefttext-2 {
+    &::after {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-grey.svg);
+      width: 81px;
+      height: 41px;
+      top: -3px;
+      right: -94px;
+      transform: rotate(-15deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__lefttext-3 {
+    &::after {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-grey.svg);
+      width: 81px;
+      height: 41px;
+      top: -20px;
+      right: -92px;
+      transform: rotate(-40deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__lefttext-4 {
+    &::after {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-grey.svg);
+      width: 81px;
+      height: 41px;
+      top: -21px;
+      right: -92px;
+      transform: rotate(-40deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    margin: 40px 20px 40px 40px;
+    @media (max-width: 540px) {
+      order: -1;
+      margin: 40px 0;
+    }
+  }
+
+  &__righttext {
+    text-align: left;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 300px;
+    padding-left: 100px;
+    font-family: 'SourceSansPro-500';
+    font-size: 15px;
+    line-height: 1.2;
+    color: #68b0c9;
+    & p {
+      position: relative;
+      margin-top: 30px;
+    }
+    @media (max-width: 992px) {
+      min-height: 380px;
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    @media (max-width: 540px) {
+      min-height: initial;
+      display: block;
+      margin-left: auto;
+      max-width: 200px;
+    }
+  }
+
+  &__righttext-1 {
+    &::before {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-blue.svg);
+      width: 81px;
+      height: 41px;
+      top: 7px;
+      left: -90px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__righttext-2 {
+    &::before {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-blue.svg);
+      width: 81px;
+      height: 41px;
+      top: -3px;
+      left: -94px;
+      transform: rotate(14deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__righttext-3 {
+    &::before {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-blue.svg);
+      width: 81px;
+      height: 41px;
+      top: -25px;
+      left: -94px;
+      transform: rotate(40deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__righttext-4 {
+    &::before {
+      content: '';
+      position: absolute;
+      background: no-repeat url(../img/icons/chain-short-blue.svg);
+      width: 81px;
+      height: 41px;
+      top: -25px;
+      left: -94px;
+      transform: rotate(40deg);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
+// grey-collor end
 
 // FOOTER start
 .footer {
