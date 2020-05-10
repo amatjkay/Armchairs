@@ -1348,6 +1348,12 @@ button {
   }
 }
 
+@media (max-width: 400px) {
+  .grey-collor__titlebox {
+    margin-right: 0;
+  }
+}
+
 .grey-collor__title {
   text-align: right;
   max-width: 100px;
