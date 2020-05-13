@@ -255,6 +255,7 @@ button {
     display: inline-flex;
     @media (max-width: 400px) {
       margin: 20px;
+      display: none;
     }
   }
 
@@ -263,10 +264,6 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     text-align: right;
-
-    @media (max-width: 400px) {
-      display: none;
-    }
   }
 
   &-box__phone {
