@@ -19,9 +19,7 @@
             <a href="tel:+79507333170" class="header-box__phone"
               >+7 (950) XXX-XX-XX</a
             >
-            <a href="#" class="header-box__callback"
-              >Заказать обратный звонок</a
-            >
+            <a class="header-box__callback">Заказать обратный звонок</a>
           </div>
         </div>
       </div>
@@ -36,17 +34,19 @@
         <div class="subtitle top__subtitle">
           с бесплатной доставкой по городу
         </div>
-        <form class="top__callback">
-          <div class="top__callback-heading">Нет времени читать?</div>
-          <div class="top__callback-subheading">
+        <form class="top__callback callback">
+          <div class="top__callback-heading callback-heading">
+            Нет времени читать?
+          </div>
+          <div class="top__callback-subheading callback-subheading">
             Оставляйте номер, мы вам перезвоним!
           </div>
           <input
             type="text"
-            class="top__callback-input input"
+            class="top__callback-input callback-input input"
             placeholder="Ваш телефон"
           />
-          <button type="submit" class="top__callback-btn btn">
+          <button type="submit" class="top__callback-btn callback-btn btn">
             Перезвоните мне
           </button>
         </form>
@@ -283,7 +283,7 @@
             </div>
             <div class="callme__callback-subtitle">бесплатную доставку!</div>
             <input
-              class="callme__callback-input input"
+              class="callme__callback-input callback-input input"
               type="text"
               placeholder="Ваш телефон"
             />
@@ -342,7 +342,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="map">
       <div class="container">
         <div class="map__inner">
@@ -400,5 +400,34 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="modal">
+      <form class="modal__callback callback">
+        <div class="modal__callback-close" id="close">+</div>
+        <div class="modal__callback-heading callback-heading">
+          Нет времени читать?
+        </div>
+        <div class="modal__callback-subheading callback-subheading">
+          Оставляйте номер, мы вам перезвоним!
+        </div>
+        <input
+          type="text"
+          class="modal__callback-input callback-input input"
+          placeholder="Ваш телефон"
+        />
+        <button type="submit" class="modal__callback-btn callback-btn btn">
+          Перезвоните мне
+        </button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".callback-input").mask("+7 (999) 999-99-99");
+      });
+    </script>
   </body>
 </html>

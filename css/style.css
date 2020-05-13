@@ -221,8 +221,57 @@ button {
   font-size: 30px;
 }
 
+.callback {
+  display: block;
+  text-align: center;
+  padding: 35px;
+  width: 300px;
+  height: 240px;
+  box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.callback-heading {
+  font-family: 'SourceSansPro-700';
+  font-size: 20px;
+  color: #68b0c9;
+  margin-bottom: 14px;
+}
+
+.callback-subheading {
+  font-family: 'SourceSansPro-300';
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 19px;
+}
+
+.callback-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.callback-btn {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.header {
+  background-color: rgba(250, 250, 250, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+}
+
+.header a {
+  cursor: pointer;
+}
+
 .header-inner {
   min-height: 100px;
+  position: inherit;
+  background-color: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -271,6 +320,7 @@ button {
 
 .top {
   padding: 80px 0 60px;
+  margin-top: 100px;
   min-height: 580px;
   background: url(../img/top-bg.jpg) #eaf1f6;
   background-size: cover;
@@ -327,15 +377,7 @@ button {
 }
 
 .top__callback {
-  display: block;
-  text-align: center;
   margin-left: auto;
-  padding: 35px;
-  width: 300px;
-  height: 240px;
-  box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
-  border-radius: 20px;
-  background-color: #ffffff;
   position: relative;
 }
 
@@ -343,29 +385,6 @@ button {
   .top__callback {
     transform: translateX(-5%);
   }
-}
-
-.top__callback-heading {
-  font-family: 'SourceSansPro-700';
-  font-size: 20px;
-  color: #68b0c9;
-  margin-bottom: 14px;
-}
-
-.top__callback-subheading {
-  font-family: 'SourceSansPro-300';
-  font-size: 12px;
-  color: #000;
-  margin-bottom: 19px;
-}
-
-.top__callback-input {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.top__callback-btn {
-  width: 100%;
 }
 
 .why-exactly {
@@ -1736,5 +1755,43 @@ button {
   .footer__logo {
     margin: 20px;
   }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 999;
+}
+
+.modal_active {
+  display: flex;
+}
+
+.modal__callback {
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: none;
+  position: relative;
+}
+
+.modal__callback-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  display: inline-block;
+  font-size: 50px;
+  transform: rotate(45deg);
+  color: #68b0c9;
+  cursor: pointer;
+}
+
+.modal__callback-close:hover {
+  color: #5ea5bd;
 }
 /*# sourceMappingURL=style.css.map */
