@@ -268,6 +268,13 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 400px) {
+  .header .container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .header-inner {
   min-height: 100px;
   position: inherit;
@@ -279,8 +286,7 @@ button {
 
 @media (max-width: 400px) {
   .header-inner {
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -291,7 +297,7 @@ button {
 
 @media (max-width: 400px) {
   .header__logo {
-    margin: 20px;
+    transform: scale(0.8);
   }
 }
 
@@ -302,20 +308,26 @@ button {
   text-align: right;
 }
 
-@media (max-width: 400px) {
-  .header-box {
-    display: none;
-  }
-}
-
 .header-box__phone {
   color: #535353;
   font-size: 24px;
   line-height: 40px;
 }
 
+@media (max-width: 400px) {
+  .header-box__phone {
+    font-size: 22px;
+  }
+}
+
 .header-box__callback {
   color: #68b0c9;
+}
+
+@media (max-width: 400px) {
+  .header-box__callback {
+    font-size: 14px;
+  }
 }
 
 .top {

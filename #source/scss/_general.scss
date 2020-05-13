@@ -237,6 +237,12 @@ button {
   a {
     cursor: pointer;
   }
+  @media (max-width: 400px) {
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+  }
   &-inner {
     min-height: 100px;
     position: inherit;
@@ -245,8 +251,7 @@ button {
     justify-content: space-between;
     align-items: center;
     @media (max-width: 400px) {
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
   }
@@ -254,8 +259,8 @@ button {
   &__logo {
     display: inline-flex;
     @media (max-width: 400px) {
-      margin: 20px;
-      display: none;
+      // margin: 0 auto 0 0;
+      transform: scale(0.8);
     }
   }
 
@@ -270,10 +275,17 @@ button {
     color: $maintext;
     font-size: 24px;
     line-height: 40px;
+    @media (max-width: 400px) {
+      font-size: 22px;
+      // margin: 0 0 0 auto;
+    }
   }
 
   &-box__callback {
     color: $accent;
+    @media (max-width: 400px) {
+      font-size: 14px;
+    }
   }
 }
 
