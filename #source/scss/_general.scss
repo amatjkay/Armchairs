@@ -610,6 +610,7 @@ button {
     }
   }
   &__order-btn {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1436,35 +1437,82 @@ button {
 // FOOTER end
 
 // modal start
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  z-index: 999;
-  &_active {
-    display: flex;
-  }
-  &__callback {
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: none;
-    position: relative;
-    &-close {
-      position: absolute;
-      top: -50px;
-      right: 0;
-      display: inline-block;
-      font-size: 50px;
-      transform: rotate(45deg);
-      color: $accent;
-      cursor: pointer;
-      &:hover {
-        color: #5ea5bd;
+.modals {
+  &__layout {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 999;
+    &_active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-callback {
+      box-shadow: none;
+      position: relative;
+      &-close {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        display: inline-block;
+        font-size: 50px;
+        transform: rotate(45deg);
+        color: $accent;
+        cursor: pointer;
+        &:hover {
+          color: #5ea5bd;
+        }
+      }
+    }
+    &-thanks {
+      display: none;
+      &_active {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        padding: 66px;
+        box-shadow: 0px 0px 38px 0px rgba(103, 175, 201, 0.34);
+        width: 362px;
+        height: 202px;
+        background-color: #ffffff;
+        border-radius: 20px;
+      }
+      &-close {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        display: inline-block;
+        font-size: 50px;
+        transform: rotate(45deg);
+        color: $accent;
+        cursor: pointer;
+        &:hover {
+          color: #5ea5bd;
+        }
+      }
+      &-heading {
+        font-family: 'SourceSansPro-700';
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #5892a6;
+      }
+      &-subheading {
+        font-family: 'SourceSansPro-300';
+        font-size: 12px;
+        line-height: 1.2;
+        color: #000000;
+      }
+      &_active {
+        display: flex;
       }
     }
   }

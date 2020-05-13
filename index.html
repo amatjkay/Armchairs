@@ -46,7 +46,11 @@
             class="top__callback-input callback-input input"
             placeholder="Ваш телефон"
           />
-          <button type="submit" class="top__callback-btn callback-btn btn">
+          <button
+            type="button"
+            class="top__callback-btn callback-btn btn"
+            id="orderBtn"
+          >
             Перезвоните мне
           </button>
         </form>
@@ -150,7 +154,7 @@
                   декабря!
                 </div>
               </div>
-              <a href="#" class="sales__order-btn btn">Заказать</a>
+              <a class="sales__order-btn btn" id="orderBtn2">Заказать</a>
             </div>
           </div>
         </div>
@@ -287,7 +291,11 @@
               type="text"
               placeholder="Ваш телефон"
             />
-            <button class="callme__callback-btn btn" type="submit">
+            <button
+              class="callme__callback-btn btn"
+              id="orderBtn3"
+              type="button"
+            >
               Перезвоните мне
             </button>
           </form>
@@ -376,7 +384,7 @@
                 >или используйте</span
               >
             </div>
-            <a href="#" class="map__inner-delivery-btn btn"
+            <a class="map__inner-delivery-btn btn" id="orderBtn4"
               >Бесплатная доставка</a
             >
           </div>
@@ -401,24 +409,44 @@
       </div>
     </footer>
 
-    <div class="modal" id="modal">
-      <form class="modal__callback callback">
-        <div class="modal__callback-close" id="close">+</div>
-        <div class="modal__callback-heading callback-heading">
-          Нет времени читать?
+    <div class="modals" id="modals">
+      <div class="modals__layout">
+        <form class="modals__layout-callback callback">
+          <div class="modals__layout-callback-close callback-close" id="close">
+            +
+          </div>
+          <div class="modals__layout-callback-heading callback-heading">
+            Нет времени читать?
+          </div>
+          <div class="modals__layout-callback-subheading callback-subheading">
+            Оставляйте номер, мы вам перезвоним!
+          </div>
+          <input
+            type="text"
+            class="modals__layout--input callback-input input"
+            placeholder="Ваш телефон"
+          />
+          <button
+            type="button"
+            class="modals__layout-btn callback-btn btn"
+            id="modalBtn"
+          >
+            Перезвоните мне
+          </button>
+        </form>
+
+        <div class="modals__layout-thanks">
+          <div class="modals__layout-thanks-close callback-close" id="close2">
+            +
+          </div>
+          <div class="modals__layout-thanks-heading callback-heading">
+            Спасибо за вашу заявку!
+          </div>
+          <div class="modals__layout-thanks-subheading callback-subheading">
+            Наш менеджер свяжется с вами в ближайшее время!
+          </div>
         </div>
-        <div class="modal__callback-subheading callback-subheading">
-          Оставляйте номер, мы вам перезвоним!
-        </div>
-        <input
-          type="text"
-          class="modal__callback-input callback-input input"
-          placeholder="Ваш телефон"
-        />
-        <button type="submit" class="modal__callback-btn callback-btn btn">
-          Перезвоните мне
-        </button>
-      </form>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
